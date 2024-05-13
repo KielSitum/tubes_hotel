@@ -31,11 +31,40 @@
                          <a class="nav-link" href="gallery.html">Gallery</a>
                       </li>
                       <li class="nav-item">
-                         <a class="nav-link" href="blog.html">Blog</a>
-                      </li>
-                      <li class="nav-item">
                          <a class="nav-link" href="contact.html">Contact Us</a>
                       </li>
+
+
+
+                      @if (Route::has('login'))
+
+        @auth
+        <li class="nav-item">
+         <ul class="navbar-nav" >
+            <li class="nav-item" style="padding-right: 10px;">
+               <a class="nav-link" href="{{route('profile.show')}}">Profile</a>
+            </li>
+            <li class="nav-item">
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
+            </li>
+        </ul>
+        
+      </li>
+         @else
+         <li class="nav-item" style="padding-right: 10px;">
+        <a class="btn btn-success" href="{{url('login')}}">Login</a>
+      </li>
+        @if (Route::has('register'))
+        <li class="nav-item">
+        <a class="btn btn-primary" href="{{url('register')}}">Register</a>
+      </li>
+        @endif
+        @endauth
+
+         @endif
                    </ul>
                 </div>
              </nav>
