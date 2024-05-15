@@ -23,10 +23,13 @@
 @include('home.about')
       <!-- end our_room -->
       <!-- gallery -->
+@include('home.room')
+      <!-- end our_room -->
+      <!-- gallery -->
 @include('home.gallery')
       <!-- end gallery -->
       <!-- blog -->
-
+      
       <!-- end blog -->
       <!--  contact -->
 @include('home.contact')
