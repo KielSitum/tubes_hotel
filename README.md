@@ -30,7 +30,7 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 
 * Login & Register
 * Logout 
-* Menambahkan, menampilkan, mengubah dan menghapus kamar
+* Menambahkan, menampilkan, mengubah, dan menghapus kamar
 * Booking kamar
 * Pesan setelah memesan kamar ("Berhasil Memesan" / "Kamar sudah dipesan")
 
@@ -38,7 +38,7 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 
 * Verifikasi email saat register
 * Menerima & menolak pesanan
-* Mengirim, menampilkan, mengubah, dan menghapus gambar kamar.
+* Mengirim, menampilkan, dan menghapus gambar kamar.
 
 **Akan Dibangun:**
 
@@ -48,7 +48,7 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 
 
 
-## Evironment
+## Environment
 
 1. Php Version : 8.1.17
 2. Laravel 10
