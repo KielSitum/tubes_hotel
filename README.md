@@ -35,18 +35,13 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 * Pesan setelah memesan kamar ("Berhasil Memesan" / "Kamar sudah dipesan")
 * Verifikasi email saat register
 * Menerima & menolak pesanan
+* Mengirim, menampilkan, dan menghapus gallery kamar.
 
 **Dalam Pengerjaan:**
 
-* Mengirim, menampilkan, dan menghapus gambar kamar.
-
-**Akan Dibangun:**
-
-* Membuat galery kamar
 * Mengirim pesan kepada admin
 * Menampilkan pesan dari pelanggan
-
-
+* Mengirim mail
 
 ## Environment
 
