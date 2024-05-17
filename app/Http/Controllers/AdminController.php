@@ -26,7 +26,10 @@ class AdminController extends Controller
             if($usertype == 'user')
             {
                 $room = Room::all();
-                return view('home.index', compact('room'));
+
+                $gallery = Gallery::all();
+
+                return view('home.index', compact('room', 'gallery'));
             }
 
             else
@@ -45,7 +48,9 @@ class AdminController extends Controller
     {
         $room = Room::all();
 
-        return view('home.index', compact ('room'));
+        $gallery = Gallery::all();
+
+        return view('home.index', compact ('room', 'gallery'));
     }
 
     public function create_room()
