@@ -19,5 +19,9 @@
                 </ul>
               </li>
 
+              <li>
+                <a href="{{('bookings')}}"> <i class="icon-home"></i>Bookings</a>
+              </li>
+
       </ul>
     </nav>
