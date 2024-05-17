@@ -1,66 +1,58 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Website Booking Hotel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Tim Pengembang
 
-## About Laravel
+### Kelompok 2 Pemrograman Web Lanjutan 
+1. 231402019 - Geri Nugraha Sitepu - Front End Development
+2. 231402061 - Yehezkiel Situmorang - Back End Development
+3. 231402064 - Ashnel Muhammad - Back End Development
+4. 231402073 - Victor Rolas Ganda - Front End Development
+5. 231402125 - Crosby Igresius Nainggolan - Front End Development
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##  Deskripsi Aplikasi
 
-## Learning Laravel
+Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hotel. Disini kami merancang website dimana website ini hanya dapat digunakan untuk mengakses satu hotel saja. Dan didalam nya terdapat berbagai macam kamar dengan harga yang berbeda-beda yang dapat dilihat dari kelasnya masing-masing.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Aplikasi ini cocok untuk:**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Wisatawan yang ingin merencanakan perjalanan mereka pada kota yang sama dengan lokasi hotel ini.
+* Pelancong bisnis yang membutuhkan akomodasi yang nyaman dan praktis.
+* Pekerja kantoran yang sedang bekerja diluar kota.
+* Siapa saja yang ingin mencari hotel terbaik untuk liburan atau keperluan lainnya.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Fitur-fitur
 
-### Premium Partners
+**Yang Sudah Dibangun:**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+* Login & Register
+* Logout 
+* Menambahkan, menampilkan, mengubah dan menghapus kamar
+* Booking kamar
+* Pesan setelah memesan kamar ("Berhasil Memesan" / "Kamar sudah dipesan")
 
-## Contributing
+**Dalam Pengerjaan:**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Verifikasi email saat register
+* Menerima & menolak pesanan
+* Mengirim, menampilkan, mengubah, dan menghapus gambar kamar.
 
-## Code of Conduct
+**Akan Dibangun:**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Membuat galery kamar
+* Mengirim pesan kepada admin
+* Menampilkan pesan dari pelanggan
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+## Evironment
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Php Version : 8.1.17
+2. Laravel 10
+3. Node.js : v20.12.2
+
+
+
