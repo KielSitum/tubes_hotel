@@ -33,11 +33,11 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 * Menambahkan, menampilkan, mengubah, dan menghapus kamar
 * Booking kamar
 * Pesan setelah memesan kamar ("Berhasil Memesan" / "Kamar sudah dipesan")
+* Verifikasi email saat register
+* Menerima & menolak pesanan
 
 **Dalam Pengerjaan:**
 
-* Verifikasi email saat register
-* Menerima & menolak pesanan
 * Mengirim, menampilkan, dan menghapus gambar kamar.
 
 **Akan Dibangun:**
