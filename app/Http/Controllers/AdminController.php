@@ -14,6 +14,7 @@ use App\Models\Booking;
 
 use App\Models\Gallery;
 
+use App\Models\Contact;
 class AdminController extends Controller
 {
     public function index()
@@ -210,6 +211,14 @@ class AdminController extends Controller
 
         return redirect()->back();
             
+    }
+
+    public function all_messages() 
+    {
+        $data = Contact::all();
+
+        return view('admin.all_messages', compact('data'));
+
     }
 
 }
