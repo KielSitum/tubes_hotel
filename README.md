@@ -33,7 +33,6 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 * Menambahkan, menampilkan, mengubah, dan menghapus kamar
 * Booking kamar
 * Pesan setelah memesan kamar ("Berhasil Memesan" / "Kamar sudah dipesan")
-* Verifikasi email saat register
 * Menerima & menolak pesanan
 * Mengirim, menampilkan, dan menghapus gallery kamar.
 
@@ -42,6 +41,7 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 * Mengirim pesan kepada admin
 * Menampilkan pesan dari pelanggan
 * Mengirim mail
+* Verifikasi email saat register
 
 ## Environment
 
