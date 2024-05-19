@@ -49,6 +49,7 @@
                     <th class="th_deg">Email</th>
                     <th class="th_deg">Phone</th>
                     <th class="th_deg">Message</th>
+                    <th class="th_deg">Send Email</th>
                 </tr>
         
                 @foreach($data as $data)
@@ -58,7 +59,9 @@
                     <td>{{$data->email}}</td>
                     <td>{{$data->phone}}</td>
                     <td>{{$data->message}}</td>
-        
+                    <td>
+                      <a class="btn btn-success"href="{{url('send_mail',$data->id)}}">send email</a>
+                    </td>
         
                 </tr>
 
