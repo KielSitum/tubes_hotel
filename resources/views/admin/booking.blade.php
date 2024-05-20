@@ -4,30 +4,43 @@
     @include('admin.css')
 
 <style type="text/css">
-        .table_deg
-    {
-        border: 2px solid white;
-        margin: auto;
-        width: 80%;
-        text-align: center;
-        margin-top: 40px;
-    }
+ .table_deg {
+            border: 2px solid white;
+            margin: auto;
+            width: 80%;
+            text-align: center;
+            margin-top: 40px;
+            table-layout: fixed; /* Added this */
+            word-wrap: break-word; /* Added this */
+        }
 
-    .th_deg
-    {
-        background-color: skyblue;
-        padding: 8px;
-    }
+        .th_deg {
+            background-color: skyblue;
+            padding: 8px;
+        }
 
-    tr
-    {
-        border: 3px solid white;
-    }
+        tr {
+            border: 3px solid white;
+        }
 
-    td
-    {
-        padding: 10px;
-    }
+        td {
+            padding: 10px;
+            word-break: break-word; /* Added this */
+        }
+
+        img {
+            max-width: 100%; /* Ensure images fit within their cells */
+        }
+
+        .btn {
+            white-space: nowrap; /* Ensure buttons don't wrap text */
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* Added this for spacing between buttons */
+        }
 
 </style>
 
@@ -89,7 +102,7 @@
             <td>{{$data->room->room_title}}</td>
             <td>{{$data->room->price}}</td>
             <td>
-                <img style="width: 200px" src="/room/{{$data->room->image}}">
+                <img style="width: 70px" src="/room/{{$data->room->image}}">
             </td>
             <td>
                 <a onclick="return confirm('Are you sure to delete this')" class="btn btn-danger"href="{{url('delete_booking',$data->id)}}">Delete</a>

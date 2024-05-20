@@ -1,4 +1,4 @@
-<div  class="gallery">
+<div id="gallery" class="gallery">
     <div class="container">
        <div class="row">
           <div class="col-md-12">
@@ -14,7 +14,7 @@
 
           <div class="col-md-3 col-sm-6">
              <div class="gallery_img">
-                <figure><img src="/gallery/{{$gallery->image}}" alt="#"/></figure>
+                <figure><img style="height:200px;width:300px;" src="/gallery/{{$gallery->image}}" alt="#"/></figure>
              </div>
           </div>
 

@@ -1,4 +1,4 @@
-<div class="contact">
+<div id="contact" class="contact">
     <div class="container">
        <div class="row">
           <div class="col-md-12">
@@ -35,7 +35,7 @@
                       <input class="contactus" placeholder="Phone Number" type="number" name="phone" required>                          
                    </div>
                    <div class="col-md-12">
-                      <textarea class="textarea" placeholder="Message" type="type" name="message">Message</textarea>
+                      <textarea class="textarea" placeholder="Message" type="type" name="message"></textarea>
                    </div>
                    <div class="col-md-12">
                       <button type="submit" class="send_btn">Send</button>

@@ -6,7 +6,7 @@
             <div class="full">
                <div class="center-desk">
                   <div class="logo">
-                     <a href="{{url('/')}}"><img src="images/logo.png" alt="#" /></a>
+                     <a href="{{url('/')}}"><img src="images/logo2.jpg" alt="#" /></a>
                   </div>
                </div>
             </div>
@@ -22,16 +22,16 @@
                         <a class="nav-link" href="{{url('/')}}">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="#about">About</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="room.html">Our room</a>
+                        <a class="nav-link" href="#our_room">Our room</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <a class="nav-link" href="#gallery">Gallery</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="#contact">Contact Us</a>
                      </li>
 
 

@@ -40,7 +40,7 @@
 
 
 
-      <div  class="our_room">
+<div id="our_room" class="content_section">
     <div class="container">
        <div class="row">
           <div class="col-md-12">
