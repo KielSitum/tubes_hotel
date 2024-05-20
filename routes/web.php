@@ -40,7 +40,8 @@ route::get('/room_details/{id}',[HomeController::class, 'room_details']);
 route::post('/add_booking/{id}',[HomeController::class, 'add_booking']);
 
 
-route::get('/bookings',[AdminController::class, 'bookings']);
+route::get('/bookings',[AdminController::class, 'bookings'])
+->middleware(['auth','admin']);
 
 
 
