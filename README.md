@@ -38,11 +38,8 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 * Mengirim pesan kepada admin
 * Menampilkan pesan dari pelanggan
 * Mengirim mail
-* 
+* Verifikasi Email
 
-**Dalam Pengerjaan:**
-
-* Verifikasi email saat register
 
 ## Environment
 
