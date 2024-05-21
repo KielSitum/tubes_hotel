@@ -20,8 +20,7 @@ use App\Http\Controllers\HomeController;
 
 route::get('/',[AdminController::class, 'home']);
 
-route::get('/home',[AdminController::class, 'index'])->name('home')
-->middleware(['auth','admin']);
+route::get('/home',[AdminController::class, 'index'])->name('home')->middleware('verified');
 
 route::get('/create_room',[AdminController::class, 'create_room'])
 ->middleware(['auth','admin']);
@@ -80,3 +79,13 @@ route::get('/send_mail/{id}',[AdminController::class, 'send_mail'])
 
 route::post('/mail/{id}',[AdminController::class, 'mail'])
 ->middleware(['auth','admin']);
+
+route::middleware([
+    'auth:sanctum', 
+     config ('jetstream.auth_session'),
+     'verified'
+     ])->group(function(){
+        Route::get('/dashboard', function () {
+            return view ('dashboard');
+        })->name('dashboard');
+     });

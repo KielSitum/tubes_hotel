@@ -7,7 +7,7 @@
  .table_deg {
             border: 2px solid white;
             margin: auto;
-            width: 80%;
+            width: 100%;
             text-align: center;
             margin-top: 40px;
             table-layout: fixed; /* Added this */
@@ -109,7 +109,7 @@
             </td>
             <td>
                 <span style ="padding-bottom: 10px;">
-                <a class ="btn btn-success" href="{{url('approve_book', $data->id)}}">Approve</a>
+                <a style = "width = 50px" class ="btn btn-success" href="{{url('approve_book', $data->id)}}">Approve</a>
                 </span>
                 <a class ="btn btn-warning" href="{{url('reject_book', $data->id)}}">Rejected</a>
             </td>
