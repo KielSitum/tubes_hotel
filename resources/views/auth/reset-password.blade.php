@@ -1,3 +1,5 @@
+<title>HUES</title>
+<link rel="icon" href="images/ikonh.jpg"/>
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">

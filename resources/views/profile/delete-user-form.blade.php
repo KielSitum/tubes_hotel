@@ -1,3 +1,5 @@
+<title>HUES</title>
+<link rel="icon" href="images/ikonh.jpg"/>
 <x-action-section>
     <x-slot name="title">
         {{ __('Delete Account') }}

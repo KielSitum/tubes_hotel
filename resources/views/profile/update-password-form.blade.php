@@ -1,3 +1,5 @@
+<title>HUES</title>
+<link rel="icon" href="images/ikonh.jpg"/>
 <x-form-section submit="updatePassword">
     <x-slot name="title">
         {{ __('Update Password') }}
