@@ -41,15 +41,12 @@ route::post('/edit_room/{id}',[AdminController::class, 'edit_room'])
 ->middleware(['auth','admin']);
 
 
-route::get('/room_details/{id}',[HomeController::class, 'room_details']);
 
 route::post('/add_booking/{id}',[HomeController::class, 'add_booking']);
 
 
 route::get('/bookings',[AdminController::class, 'bookings'])
 ->middleware(['auth','admin']);
-
-
 
 route::get('/delete_booking/{id}',[AdminController::class, 'delete_booking'])
 ->middleware(['auth','admin']);
@@ -79,6 +76,10 @@ route::get('/send_mail/{id}',[AdminController::class, 'send_mail'])
 
 route::post('/mail/{id}',[AdminController::class, 'mail'])
 ->middleware(['auth','admin']);
+
+Route::middleware('auth')->group(function () {
+    route::get('/room_details/{id}',[HomeController::class, 'room_details']);
+});
 
 route::middleware([
     'auth:sanctum', 

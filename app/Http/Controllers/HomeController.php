@@ -84,4 +84,9 @@ class HomeController extends Controller
 
         return redirect()->back()->with('message','Pesan Terkirim');
     }
+    
+    protected function authenticated(Request $request, $user)
+    {
+        return redirect()->intended($this->redirectPath());
+    }
 }

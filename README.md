@@ -9,8 +9,6 @@
 4. 231402073 - Victor Rolas Ganda - Front End Development
 5. 231402125 - Crosby Igresius Nainggolan - Front End Development
 
-
-
 ##  Deskripsi Aplikasi
 
 Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hotel. Disini kami merancang website dimana website ini hanya dapat digunakan untuk mengakses satu hotel saja. Dan didalam nya terdapat berbagai macam kamar dengan harga yang berbeda-beda yang dapat dilihat dari kelasnya masing-masing.
@@ -26,20 +24,20 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 
 ## Fitur-fitur
 
-**Yang Sudah Dibangun:**
-
 * Login & Register
-* Logout 
-* Menambahkan, menampilkan, mengubah, dan menghapus kamar
+* Validasi Form 
+* Verifikasi Email
+* Login Multilevel User 
+* Update Profile
 * Booking kamar
 * Pesan setelah memesan kamar ("Berhasil Memesan" / "Kamar sudah dipesan")
+* Mengirim pesan kepada admin
+* Menambahkan, menampilkan, mengubah, dan menghapus kamar
 * Menerima & menolak pesanan
 * Mengirim, menampilkan, dan menghapus gallery kamar.
-* Mengirim pesan kepada admin
 * Menampilkan pesan dari pelanggan
 * Mengirim mail
-* Verifikasi Email
-
+* Logout 
 
 ## Environment
 
