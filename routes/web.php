@@ -74,7 +74,13 @@ route::get('/all_messages',[AdminController::class, 'all_messages'])
 route::get('/send_mail/{id}',[AdminController::class, 'send_mail'])
 ->middleware(['auth','admin']);
 
+route::get('/send_mail_bookings/{id}',[AdminController::class, 'send_mail_bookings'])
+->middleware(['auth','admin']);
+
 route::post('/mail/{id}',[AdminController::class, 'mail'])
+->middleware(['auth','admin']);
+
+route::post('/mail_bookings/{id}',[AdminController::class, 'mail_bookings'])
 ->middleware(['auth','admin']);
 
 Route::middleware('auth')->group(function () {

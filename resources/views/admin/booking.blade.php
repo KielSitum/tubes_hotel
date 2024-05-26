@@ -70,6 +70,7 @@
             <th class="th_deg">Image</th>
             <th class="th_deg">Delete</th>
             <th class="th_deg">Status Update</th>
+            <th class="th_deg">Send Mail</th>
 
         </tr>
 
@@ -109,14 +110,18 @@
             </td>
             <td>
                 <span style ="padding-bottom: 10px;">
-                <a style = "width = 50px" class ="btn btn-success" href="{{url('approve_book', $data->id)}}">Approve</a>
+                <a style = "padding: 5px 3px" class ="btn btn-success" href="{{url('approve_book', $data->id)}}">Approve</a>
                 </span>
-                <a class ="btn btn-warning" href="{{url('reject_book', $data->id)}}">Rejected</a>
+                <a style = "padding: 5px 3px" class ="btn btn-warning" href="{{url('reject_book', $data->id)}}">Rejected</a>
             </td>
-        </tr>
+            <td>
+                <a style="font-size: 15px; padding: 10px 0px;"class="btn btn-success"href="{{url('send_mail_bookings',$data->id)}}">Send Email</a>
+            </td>
+        
 
         @endforeach
 
+        </tr>
 
         </table>
         

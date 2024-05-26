@@ -141,10 +141,11 @@ class AdminController extends Controller
 
     public function bookings()
     {
-        $data=Booking::all();
-        return view('admin.booking',compact('data'));
-
+        $data = Booking::all();
+        $contacts = Contact::all();
+        return view('admin.booking', compact('data', 'contacts'));
     }
+
 
     public function delete_booking($id)
     {
@@ -188,6 +189,7 @@ class AdminController extends Controller
         $gallery = Gallery::all();
         return view('admin.gallery', compact('gallery'));
     }
+
     public function upload_gallery(Request $request)
     {
         $data = new Gallery;
@@ -226,17 +228,49 @@ class AdminController extends Controller
 
     }
 
-
     public function send_mail($id)
     {
         $data = Contact::find($id);
         return view('admin.send_mail',compact('data'));
     }
 
+    public function send_mail_bookings($id)
+    {
+        $data = Booking::find($id);
+        return view('admin.send_mail_bookings',compact('data'));
+    }
+
 
     public function mail(Request $request,$id)
     {
         $data = Contact::find($id);
+
+        $details = [
+            
+            'greeting' => $request->greeting ,
+
+            'body' => $request->body ,
+
+            'action_text' => $request->action_text ,
+
+            'action_url' => $request->action_url ,
+
+            'endline' => $request->endline ,
+
+
+        ];
+
+        Notification::send($data,new SendEmailNotification($details));
+
+
+        return redirect()->back();
+
+
+    }
+
+    public function mail_bookings(Request $request,$id)
+    {
+        $data = Booking::find($id);
 
         $details = [
             
