@@ -9,6 +9,11 @@ use App\Models\Room;
 use App\Models\Booking;
 
 use App\Models\Contact;
+
+use App\Models\User;
+
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     public function room_details($id)
@@ -30,6 +35,9 @@ class HomeController extends Controller
         $data = new Booking;
 
         $data->room_id = $id;
+
+        $user_id = Auth::id();
+        $data->user_id = $user_id;
 
         $data->name = $request->name;
         

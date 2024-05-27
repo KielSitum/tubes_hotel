@@ -128,7 +128,7 @@
 
                    <h4 style="padding: 12px">ROOM TYPE : {{$room->room_type}}</h4>
 
-                   <h3 style="padding: 12px">PRICE : {{$room->price}}</h3>
+                   <h4 style="padding: 12px">PRICE : {{$room->price}}</h3>
                 </div>
              </div>
           </div>
@@ -169,19 +169,19 @@
           <div>
             <label>Name</label>
             <input type="text" name="name" 
-            <?php if(Auth::id()): ?> value="{{Auth::user()->name}}" disabled <?php endif; ?>
+            value="@auth{{ Auth::user()->name }}@endauth" readonly
             >
           </div>
           <div>
             <label>Email</label>
             <input type="email" name="email"
-            <?php if(Auth::id()): ?> value="{{Auth::user()->email}}" disabled <?php endif; ?>
+            value="@auth{{ Auth::user()->email }}@endauth" readonly
             >
           </div>
           <div>
             <label>Phone</label>
             <input type="number" name="phone"
-            <?php if(Auth::id()): ?> value="{{Auth::user()->phone}}" disabled <?php endif; ?>
+            value="@auth{{ Auth::user()->phone }}@endauth" readonly
             >
           </div>
           <div>
