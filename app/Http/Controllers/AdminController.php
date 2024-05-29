@@ -142,8 +142,7 @@ class AdminController extends Controller
     public function bookings()
     {
         $data = Booking::all();
-        $contacts = Contact::all();
-        return view('admin.booking', compact('data', 'contacts'));
+        return view('admin.booking', compact('data'));
     }
 
 

@@ -41,7 +41,6 @@ route::post('/edit_room/{id}',[AdminController::class, 'edit_room'])
 ->middleware(['auth','admin']);
 
 
-
 route::post('/add_booking/{id}',[HomeController::class, 'add_booking']);
 
 

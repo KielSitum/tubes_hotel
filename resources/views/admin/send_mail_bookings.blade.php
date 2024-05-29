@@ -52,17 +52,6 @@
                         <textarea name="body"></textarea>
                     </div>
                     <div class="div_design">
-                        <label for="">Action Tect</label>
-                        <input type="text" name="action_text">
-                    </div>
-
-                    <div class="div_design">
-                        <label for="">Action Url</label>
-                        <input type="text" name="action_url">
-                    </div>
-
-
-                    <div class="div_design">
                         <label for="">End Line</label>
                         <input type="text" name="endline">
                     </div>

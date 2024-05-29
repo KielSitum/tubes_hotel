@@ -52,7 +52,7 @@
                         <textarea name="body"></textarea>
                     </div>
                     <div class="div_design">
-                        <label for="">Action Tect</label>
+                        <label for="">Action Text</label>
                         <input type="text" name="action_text">
                     </div>
 
