@@ -17,6 +17,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/user/profile', function () {
+        return view('profile.show');
+    })->name('profile.show');
+});
 
 route::get('/',[AdminController::class, 'home']);
 
