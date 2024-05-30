@@ -23,6 +23,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('profile.show');
 });
 
+
 route::get('/',[AdminController::class, 'home']);
 
 route::get('/home',[AdminController::class, 'index'])->name('home')->middleware('verified');
@@ -35,6 +36,8 @@ route::post('/add_room',[AdminController::class, 'add_room'])
 
 route::get('/view_room',[AdminController::class, 'view_room'])
 ->middleware(['auth','admin']);
+
+route::get('/cancel_booking/{id}',[HomeController::class, 'cancel_booking']);
 
 route::get('/room_delete/{id}',[AdminController::class, 'room_delete'])
 ->middleware(['auth','admin']);
@@ -70,7 +73,12 @@ route::post('/upload_gallery',[AdminController::class, 'upload_gallery'])
 route::get('/delete_gallery/{id}',[AdminController::class, 'delete_gallery'])
 ->middleware(['auth','admin']);
 
-route::post('/contact',[HomeController::class, 'contact']);
+Route::get('/contact', function () {
+    return view('contact');
+})->middleware('auth');
+
+Route::post('/contact', [HomeController::class, 'contact'])->middleware('auth');
+
 
 route::get('/all_messages',[AdminController::class, 'all_messages'])
 ->middleware(['auth','admin']);
@@ -90,6 +98,14 @@ route::post('/mail_bookings/{id}',[AdminController::class, 'mail_bookings'])
 Route::middleware('auth')->group(function () {
     route::get('/room_details/{id}',[HomeController::class, 'room_details']);
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/history', [HomeController::class, 'index'])->name('history.index');
+    Route::get('/history/{id}', [HomeController::class, 'show'])->name('history.show');
+});
+
+
+
 
 route::middleware([
     'auth:sanctum', 

@@ -19,8 +19,37 @@ class HomeController extends Controller
     public function room_details($id)
     {
         $room = Room::find($id);
-
         return view ('home.room_details', compact('room'));
+    }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    // Method untuk menampilkan daftar pemesanan dan detail pemesanan
+    public function index($id = null)
+    {
+        $userId = Auth::id();
+        if ($id) {
+            $booking = Booking::where('user_id', $userId)->find($id);
+
+            if (!$booking) {
+                abort(403); // Jika pengguna mencoba mengakses pemesanan yang bukan miliknya
+            }
+
+            return view('home.history', compact('booking'));
+        }
+
+        $bookings = Booking::where('user_id', $userId)->get();
+        return view('home.history', compact('bookings'));
+    }
+
+    public function cancel_booking($id)
+    {
+        $bookings = Booking::find($id);
+        $bookings->delete();
+        return redirect()->back();
     }
 
     public function add_booking(Request $request, $id)
@@ -92,6 +121,11 @@ class HomeController extends Controller
 
         return redirect()->back()->with('message','Pesan Terkirim');
     }
+
+
+    
+    
+
     
     protected function authenticated(Request $request, $user)
     {
