@@ -30,6 +30,7 @@ Website ini dibuat untuk mempermudah orang dalam melakukan pemesanan sebuah hote
 * Login Multilevel User 
 * Update Profile
 * Booking kamar
+* Melihat Order
 * Pesan setelah memesan kamar ("Berhasil Memesan" / "Kamar sudah dipesan")
 * Mengirim pesan kepada admin
 * Menambahkan, menampilkan, mengubah, dan menghapus kamar

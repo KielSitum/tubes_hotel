@@ -138,14 +138,14 @@ class HomeController extends Controller
     
         // Load HTML content
         $html = '<html><body>';
-        $html .= '<center><h1>TICKET HOTEL</h1><center>';
+        $html .= '<center><h1><u>TICKET HOTEL</u></h1><center>';
         $html .= '<table border="1" style="border-collapse: collapse; width: 100%;">';
         $html .= '<tr>';
-        $html .= '<th>Name</th>';
-        $html .= '<th>Email</th>';
-        $html .= '<th>Phone</th>';
-        $html .= '<th>Check In</th>';
-        $html .= '<th>Check Out</th>';
+        $html .= '<th style="background-color: skyblue;">Name</th>';
+        $html .= '<th style="background-color: skyblue;">Email</th>';
+        $html .= '<th style="background-color: skyblue;">Phone</th>';
+        $html .= '<th style="background-color: skyblue;">Check In</th>';
+        $html .= '<th style="background-color: skyblue;">Check Out</th>';
         $html .= '</tr>';
         $html .= '<tr>';
         $html .= '<td>' . $booking->name .  '</td>';
