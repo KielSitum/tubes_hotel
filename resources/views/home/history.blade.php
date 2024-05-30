@@ -123,13 +123,16 @@
                     <table class = "mb-4">
                         <tr>
                             <th class="th_deg">Booking id</th>
-                            <th class="th_deg">Customer name</th>
+                            <th class="th_deg">Customer Name</th>
                             <th class="th_deg">Email</th>
                             <th class="th_deg">Phone</th>
-                            <th class="th_deg">Arival Date</th>
-                            <th class="th_deg">Leaving Date</th>
+                            <th class="th_deg">Check In</th>
+                            <th class="th_deg">Check Out</th>
                             <th class="th_deg">Status</th>
                             <th class="th_deg">Cancel Booking</th>
+                            @if($booking->status == 'approve')
+                            <th class="th_deg">Ticket</th>
+                            @endif
                         </tr>
                         <tr>
                             <td>
@@ -156,6 +159,14 @@
                             <td>
                                 <a class="btn btn-danger"href="{{url('cancel_booking',$booking->id)}} ">Cancel</a>
                             </td>
+                            
+                                @if($booking->status == 'approve')
+                                <td>
+                                    <a class="btn btn-primary" href="{{ route('ticket.download', $booking->id) }}">Download Ticket</a>
+                                </td>
+                                
+                                    @endif
+                            
                         </tr>
                     </table>
                     @endforeach

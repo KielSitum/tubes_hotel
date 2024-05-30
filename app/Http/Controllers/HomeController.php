@@ -14,6 +14,10 @@ use App\Models\User;
 
 use Illuminate\Support\Facades\Auth;
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
 class HomeController extends Controller
 {
     public function room_details($id)
@@ -100,9 +104,6 @@ class HomeController extends Controller
             return redirect()->back()->with('message','Kamar Berhasil Dipesan');
         }
 
-
-       
-
     }
 
     public function contact(Request $request)
@@ -122,7 +123,49 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Pesan Terkirim');
     }
 
-
+    
+    public function downloadTicket($bookingId)
+    {
+        // Dapatkan data booking berdasarkan ID
+        $booking = Booking::findOrFail($bookingId);
+    
+        // Setup DOMPDF
+        $options = new Options();
+        $options->set('isHtml5ParserEnabled', true);
+        $options->set('isRemoteEnabled', true);
+    
+        $dompdf = new Dompdf($options);
+    
+        // Load HTML content
+        $html = '<html><body>';
+        $html .= '<center><h1>TICKET HOTEL</h1><center>';
+        $html .= '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        $html .= '<tr>';
+        $html .= '<th>Name</th>';
+        $html .= '<th>Email</th>';
+        $html .= '<th>Phone</th>';
+        $html .= '<th>Check In</th>';
+        $html .= '<th>Check Out</th>';
+        $html .= '</tr>';
+        $html .= '<tr>';
+        $html .= '<td>' . $booking->name .  '</td>';
+        $html .= '<td>' . $booking->email . '</td>';
+        $html .= '<td>' . $booking->phone . '</td>';
+        $html .= '<td>' . $booking->start_date .  ' 12:00 WIB</td>';
+        $html .= '<td>' . $booking->end_date .  ' 12:00 WIB</td>';
+        $html .= '</tr>';
+        $html .= '</table>';
+        $html .= '</body></html>';
+    
+        $dompdf->loadHtml($html);
+    
+        // Render PDF
+        $dompdf->render();
+    
+        // Output PDF to browser or save to file
+        return $dompdf->stream('ticket.pdf', array('Attachment' => 0));
+    }
+    
     
     
 
