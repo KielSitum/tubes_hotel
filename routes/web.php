@@ -31,11 +31,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     
     Route::get('/room_details/{id}', [HomeController::class, 'room_details']);
     Route::post('/add_booking/{id}', [HomeController::class, 'add_booking']);
+
+    Route::get('/history', [HomeController::class, 'index'])->name('history.index');
+    Route::get('/history/{id}', [HomeController::class, 'show'])->name('history.show');
     
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
+
 
 // Admin routes
 Route::middleware(['auth', 'admin', 'verified'])->group(function () {
