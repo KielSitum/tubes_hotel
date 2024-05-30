@@ -70,7 +70,12 @@ route::post('/upload_gallery',[AdminController::class, 'upload_gallery'])
 route::get('/delete_gallery/{id}',[AdminController::class, 'delete_gallery'])
 ->middleware(['auth','admin']);
 
-route::post('/contact',[HomeController::class, 'contact']);
+Route::get('/contact', function () {
+    return view('contact');
+})->middleware('auth');
+
+Route::post('/contact', [HomeController::class, 'contact'])->middleware('auth');
+
 
 route::get('/all_messages',[AdminController::class, 'all_messages'])
 ->middleware(['auth','admin']);
