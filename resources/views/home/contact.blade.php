@@ -20,47 +20,24 @@
                    
                    <div class="row">
                      <div class="col-md-12">
-                            @if(Auth::id())
-                                <p></p>
-                            @else
-                            <p>Please <a href="{{ route('login') }}">login</a> to contact us.</p>
-                            @endif
                     </div>
                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Name" type="text" name="name"
-                               @if(Auth::id())
-                                   value="{{ Auth::user()->name }}"
-                               @else
-                                   disabled
-                               @endif
-                               required>
+                           <input class="contactus" placeholder="Name" type="type" name="name"
+                                   @if(Auth::id()) value="{{ Auth::user()->name }}" @endif required>
                        </div>
                        <div class="col-md-12">
                            <input class="contactus" placeholder="Email" type="email" name="email"
-                               @if(Auth::id())
-                                   value="{{ Auth::user()->email }}"
-                               @else
-                                   disabled
-                               @endif
-                               required>
+                                    @if(Auth::id())value="{{ Auth::user()->email }}" @endif required>
                        </div>
                        <div class="col-md-12">
                            <input class="contactus" placeholder="Phone Number" type="number" name="phone"
-                               @if(Auth::id())
-                                   value="{{ Auth::user()->phone }}"
-                               @else
-                                   disabled
-                               @endif
-                               required>
+                                    @if(Auth::id()) value="{{ Auth::user()->phone }}" @endif required>
                        </div>
                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="text" name="message"
-                               @if(!Auth::id())
-                                   disabled
-                               @endif></textarea>
+                           <textarea class="textarea" placeholder="Message" type="text" name="message"></textarea>
                        </div>
                        <div class="col-md-12">
-                           <button type="submit" class="send_btn" @if(!Auth::id()) disabled @endif>Send</button>
+                           <button type="submit" class="send_btn">Send</button>
                        </div>
                    </div>
                </form>
