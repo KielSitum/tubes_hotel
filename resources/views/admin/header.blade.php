@@ -25,7 +25,7 @@
           
           <!-- Languages dropdown    -->
           <div class="list-inline-item">
-            <a class="nav-link" href="{{route('profile.show')}}">Profile</a>
+            <a class="nav-link" href="{{route('profile.edit')}}">Profile</a>
           </div>
           <!-- Log out               -->
           <div class="list-inline-item logout">

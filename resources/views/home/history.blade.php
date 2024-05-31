@@ -73,7 +73,7 @@
            <li class="nav-item">
             <ul class="navbar-nav" >
                <li class="nav-item" style="padding-right: 10px;">
-                  <a class="nav-link" href="{{route('profile.show')}}">{{ Auth::user()->name }}</a>
+                  <a class="nav-link" href="{{route('profile.edit')}}">{{ Auth::user()->name }}</a>
                </li>
                <li class="nav-item">
                    <form action="{{ route('logout') }}" method="POST">
