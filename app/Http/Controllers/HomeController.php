@@ -166,10 +166,6 @@ class HomeController extends Controller
         return $dompdf->stream('ticket.pdf', array('Attachment' => 0));
     }
     
-    
-    
-
-    
     protected function authenticated(Request $request, $user)
     {
         return redirect()->intended($this->redirectPath());

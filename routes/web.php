@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UpdateProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/download-ticket/{id}', [HomeController::class, 'downloadTicket'])->name('ticket.download');
 
+    Route::get('edit', [UpdateProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('update', [UpdateProfileController::class, 'update'])->name('profile.update');
 });
 
 
