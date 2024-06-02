@@ -68,7 +68,7 @@
                                     @if (Route::has('login'))
                                         @auth
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a class="nav-link disabled" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     {{ Auth::user()->name }}
                                                 </a>
                                                 <ul class="dropdown-menu" aria-labelledby="userDropdown">
