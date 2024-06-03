@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head> 
+<head>
     @include('admin.css')
 
     <style type="text/css">
-
-    .table_deg
-    {
+    .table_deg {
         border: 2px solid white;
         margin: auto;
         width: 80%;
@@ -14,79 +12,90 @@
         margin-top: 40px;
     }
 
-    .th_deg
-    {
+    .th_deg {
         background-color: skyblue;
         padding: 15px;
     }
 
-    tr
-    {
+    tr {
         border: 3px solid white;
     }
 
-    td
-    {
+    td {
         padding: 10px;
     }
 
+    .alert {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     </style>
 
-  </head>
-  <body>
+</head>
+<body>
     @include('admin.header')
 
     @include('admin.sidebar')
-      <!-- Sidebar Navigation end-->
+    <!-- Sidebar Navigation end-->
 
-      <div class="page-content">
-    <div class="page-header">
-      <div class="container-fluid">
+    <div class="page-content">
+        <div class="page-header">
+            <div class="container-fluid">
 
-        <table class="table_deg">
-          
-        <tr>
-            <th class="th_deg">Room Title</th>
-            <th class="th_deg">Description</th>
-            <th class="th_deg">Price</th>
-            <th class="th_deg">Wifi</th>
-            <th class="th_deg">Room Type</th>
-            <th class="th_deg">Image</th>
-            <th class="th_deg">Delete</th>
-            <th class="th_deg">Update</th>
-        </tr>
+                <!-- Flash Messages -->
+                @if(session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
 
-        @foreach ($data as $data)
-        <tr>
-            <td>{{$data->room_title}}</td>
-            <td>{!! Str::limit($data->description,150)!!}</td>
-            <td>Rp.{{$data->price}}</td>
-            <td>{{$data->wifi}}</td>
-            <td>{{$data->room_type}}</td>
-            <td>
-                <img width="100" src="room/{{$data->image}}">    
-            </td>
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
 
-            <td>
-              <a onclick="return confirm ('Are you sure to delete this room? ');" class="btn btn-danger"href="{{url('room_delete', $data->id)}}">Delete</a>
-            </td>
+                <table class="table_deg">
+                    <tr>
+                        <th class="th_deg">Room Title</th>
+                        <th class="th_deg">Description</th>
+                        <th class="th_deg">Price</th>
+                        <th class="th_deg">Wifi</th>
+                        <th class="th_deg">Room Type</th>
+                        <th class="th_deg">Image</th>
+                        <th class="th_deg">Delete</th>
+                        <th class="th_deg">Update</th>
+                    </tr>
 
-            <td>
-              <a class="btn btn-warning"href="{{url('room_update', $data->id)}}">Update</a>
-            </td>
+                    @foreach ($data as $data)
+                    <tr>
+                        <td>{{$data->room_title}}</td>
+                        <td>{!! Str::limit($data->description, 150) !!}</td>
+                        <td>Rp.{{$data->price}}</td>
+                        <td>{{$data->wifi}}</td>
+                        <td>{{$data->room_type}}</td>
+                        <td>
+                            <img width="100" src="room/{{$data->image}}">
+                        </td>
 
-        </tr>
+                        <td>
+                            <a onclick="return confirm('Are you sure to delete this room?');" class="btn btn-danger" href="{{url('room_delete', $data->id)}}">Delete</a>
+                        </td>
 
-        @endforeach
+                        <td>
+                            <a class="btn btn-warning" href="{{url('room_update', $data->id)}}">Update</a>
+                        </td>
+                    </tr>
+                    @endforeach
 
-        </table>
+                </table>
 
-</div>
-
+            </div>
+        </div>
     </div>
 
-        </div>
-
-        @include('admin.footer')
-  </body>
+    @include('admin.footer')
+</body>
 </html>

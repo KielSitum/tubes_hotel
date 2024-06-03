@@ -74,6 +74,12 @@
           <div class="container-fluid">
     <h1>Room Status</h1>
 
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
     <table class="table_deg">
         <thead>
             <tr>
