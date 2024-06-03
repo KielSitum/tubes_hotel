@@ -168,7 +168,7 @@ class AdminController extends Controller
 
         $booking = Booking::find($id);
 
-        $booking->status='approve';
+        $booking->status='Approve';
 
         $booking->save();
 
@@ -181,7 +181,7 @@ class AdminController extends Controller
 
         $booking = Booking::find($id);
 
-        $booking->status='rejected';
+        $booking->status='Rejected';
 
         $booking->save();
 
@@ -299,6 +299,22 @@ class AdminController extends Controller
 
 
     }
+
+    public function room_status()
+    {
+    $data = Booking::all(); // Ganti sesuai model dan logika Anda
+    return view('admin.room_status', compact('data'));
+    }
+
+    public function update_room_status(Request $request, $id)
+    {
+    $booking = Booking::find($id); // Ganti sesuai model dan logika Anda
+    $booking->status = $request->status;
+    $booking->save();
+
+    return redirect()->back()->with('success', 'Room status updated successfully');
+    }
+
 
 }
 

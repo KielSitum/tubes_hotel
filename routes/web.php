@@ -57,6 +57,8 @@ Route::middleware(['auth', 'admin', 'verified'])->group(function () {
     Route::post('/edit_room/{id}', [AdminController::class, 'edit_room']);
     
     Route::get('/bookings', [AdminController::class, 'bookings']);
+    Route::get('/room_status', [AdminController::class, 'room_status'])->name('room_status');
+    Route::put('/room_status/update/{id}', [AdminController::class, 'update_room_status'])->name('room_status.update');
     Route::get('/delete_booking/{id}', [AdminController::class, 'delete_booking']);
     Route::get('/approve_book/{id}', [AdminController::class, 'approve_book']);
     Route::get('/reject_book/{id}', [AdminController::class, 'reject_book']);

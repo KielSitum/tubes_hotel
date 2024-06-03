@@ -85,18 +85,26 @@
             <td>{{$data->end_date}}</td>
             <td>
 
-                @if($data->status == 'approve')
+                @if($data->status == 'Approve')
 
                 <span style ="color:skyblue;">Approved</span>
 
-                @elseif($data->status == 'rejected')
+                @elseif($data->status == 'Rejected')
 
                 <span style ="color:red;">Rejected</span>
 
-                @elseif($data->status == 'waiting')
+                @elseif($data->status == 'Waiting')
 
                 <span style ="color:yellow;">Waiting</span>
-               
+
+                @elseif($data->status == 'Using')
+                
+                <span style ="color:green;">Using</span>
+
+                @elseif($data->status == 'Check-out')
+
+                <span style ="color:blue;">Check Out</span>
+
                 @endif
 
             </td>
