@@ -93,11 +93,17 @@ class AdminController extends Controller
 
     public function room_delete($id)
     {
-        $data = Room::find($id);
-        
-        $data->delete();
+    // Check if the room has any bookings
+    $bookings = Booking::where('room_id', $id)->where('end_date', '>=', now())->count();
 
-        return redirect()->back();
+    if ($bookings > 0) {
+        // If there are active bookings, prevent deletion and return a message
+        return redirect()->back()->with('error', 'Kamar tidak dapat dihapus karena masih dibooking.');
+    }
+
+    // If no active bookings, proceed with deletion
+    Room::find($id)->delete();
+    return redirect()->back()->with('success', 'Kamar berhasil dihapus.');
     }
 
     public function room_update($id)
