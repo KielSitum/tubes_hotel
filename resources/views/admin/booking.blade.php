@@ -105,6 +105,10 @@
 
                 <span style ="color:blue;">Check Out</span>
 
+                @elseif($data->status == 'Pending')
+
+                <span style ="color:rgb(255, 123, 0);">Pending</span>
+
                 @endif
 
             </td>

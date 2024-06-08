@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('bookings', function (Blueprint $table) {
             
-            $table->string('status')->default('waiting')->after('phone');
+            $table->string('status')->default('Pending')->after('phone');
 
 
         });

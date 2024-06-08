@@ -59,6 +59,10 @@
                 color: red; /* Warna merah untuk status "Rejected" */
             }
 
+            .status-pending {
+                color: rgb(255, 123, 0); /* Warna merah untuk status "Rejected" */
+            }
+
             .status-approve {
                 color: skyblue; /* Warna biru untuk status "Approve" */
             }
@@ -104,12 +108,13 @@
                     <td>{{ $booking->phone }}</td>
                     <td>{{ $booking->start_date }}</td>
                     <td>{{ $booking->end_date }}</td>
-                    <td class="@if($booking->status == 'Waiting') status-waiting @elseif($booking->status == 'Using') status-using @elseif($booking->status == 'Check-out') status-checkout @elseif($booking->status == 'Rejected') status-rejected @elseif($booking->status == 'Approve') status-approve @endif">{{ $booking->status }}</td>
+                    <td class="@if($booking->status == 'Waiting') status-waiting @elseif($booking->status == 'Using') status-using @elseif($booking->status == 'Check-out') status-checkout @elseif($booking->status == 'Rejected') status-rejected @elseif($booking->status == 'Approve') status-approve @elseif($booking->status == 'Pending') status-pending @endif"  >{{ $booking->status }}</td>
                     <td>
                         <form action="{{ route('room_status.update', $booking->id) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <select name="status">
+                                <option value="Pending">Pending</option>
                                 <option value="Waiting">Waiting</option>
                                 <option value="Using">Using</option>
                                 <option value="Check-out">Check Out</option>
