@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('contact');
     }
 
     // Method untuk menampilkan daftar pemesanan dan detail pemesanan

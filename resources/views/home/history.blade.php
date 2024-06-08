@@ -129,36 +129,40 @@
                             <th class="th_deg">Check In</th>
                             <th class="th_deg">Check Out</th>
                             <th class="th_deg">Status</th>
+                            @if($booking->status == 'Waiting')
                             <th class="th_deg">Cancel Booking</th>
+                            @endif
                             @if($booking->status == 'Approve')
                                 <th class="th_deg">Ticket</th>
                             @endif
                         </tr>
                         <tr>
                             <td>
-                                <a href="{{ route('history.show', $booking->id) }}">{{ $booking->id }}</a>
+                                <p>{{ $booking->id }}</p>
                             </td>
                             <td>
-                                <a href="{{ route('history.show', $booking->id) }}">{{ $booking->name }}</a>
+                                <p>{{ $booking->name }}</p>
                             </td>
                             <td>
-                                <a href="{{ route('history.show', $booking->id) }}">{{ $booking->email }}</a>
+                                <p>{{ $booking->email }}</p>
                             </td>
                             <td>
-                                <a href="{{ route('history.show', $booking->id) }}">{{ $booking->phone }}</a>
+                                <p>{{ $booking->phone }}</p>
                             </td>
                             <td>
-                                <a href="{{ route('history.show', $booking->id) }}">{{ $booking->start_date }}</a>
+                                <p>{{ $booking->start_date }}</p>
                             </td>
                             <td>
-                                <a href="{{ route('history.show', $booking->id) }}">{{ $booking->end_date }}</a>
+                                <p>{{ $booking->end_date }}</p>
                             </td>
                             <td>
-                                <a href="{{ route('history.show', $booking->id) }}">{{ $booking->status }}</a>
+                                <p>{{ $booking->status }}</p>
                             </td>
+                            @if($booking->status == 'Waiting')
                             <td>
                                 <a class="btn btn-danger"href="{{url('cancel_booking',$booking->id)}} ">Cancel</a>
                             </td>
+                            @endif
                             
                                 @if($booking->status == 'Approve')
                                 <td>
